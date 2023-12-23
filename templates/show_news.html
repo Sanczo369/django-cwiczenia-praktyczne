@@ -1,0 +1,6 @@
+<h3>{{ news.title }}</h3>
+{{ news.text|safe }}<br />
+    <b>Dodane</b>: {{ news.date|date:"Y.m.d H:i" }}, <b>Kategorie</b>:
+{% for i in news.category.all %}
+    <a href="/{{ i.slug }}/">{{ i.name }}</a>{% if not forloop.last%}, {% endif %}
+{% endfor %}

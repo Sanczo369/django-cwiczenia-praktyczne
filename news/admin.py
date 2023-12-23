@@ -12,6 +12,7 @@ class NewsAdmin(admin.ModelAdmin):
     list_display = ('title','date')
     prepopulated_fields = {'slug': ('title',)}
     search_fields =  ['title', 'text']
+    date_hierarchy = "date"
 
     
 # rejestracja wraz z podaniem klasy konfigurującej PA
