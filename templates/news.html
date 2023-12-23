@@ -1,0 +1,7 @@
+{% for n in object_list %}
+    <h3><a href="/news/{{ n.slug }}/">{{ n.title }}</a></h3>
+    {{ n.text|safe }}<br />
+    <b>Dodane</b>: {{ n.date|date:"Y.m.d H:i" }},<b>Kategorie</b>:{{ n.category }}
+{% endfor %}
+    <div style="text-align:center;"><a href="/?page=1"><b>Nowsze wiadomości</b></a></div>
+    <div style="text-align:center;"><a href="/?page=2"><b>Starsze wiadomości</b></a></div>

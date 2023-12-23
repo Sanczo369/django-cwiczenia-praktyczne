@@ -1,6 +1,0 @@
-<h1>Moja strona </h1>
-{% for n in news %}
-<h3>{{ n.title }}</h3>
-{{ n.text|safe }}<br />
-{{ n.date|date:"Y.m.d H:i" }}
-{% endfor %}
